@@ -1,6 +1,6 @@
 {
   "name": "ios-app-agent-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reusable Codex subagents, project skills, and execution-plan templates for native iOS development.",
   "author": {
     "name": "YUYA-hoge"
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "iOS App Agent Kit",
     "shortDescription": "A reusable iOS development team for Codex.",
-    "longDescription": "Install focused product, architecture, implementation, QA, security, release, and growth agents into an iOS project.",
+    "longDescription": "Install a Main Agent First workflow with focused product, architecture, implementation, QA, security, release, and growth agents for use only when delegation adds value.",
     "developerName": "YUYA-hoge",
     "category": "Productivity",
     "capabilities": [],
