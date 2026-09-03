@@ -1,6 +1,6 @@
 ---
 name: ios-app-agent-workflow
-description: Install and coordinate a project-scoped Codex subagent team for native iOS product discovery, requirements, architecture, SwiftUI implementation, QA, privacy, App Store release, and growth marketing. Use when setting up this kit, planning an end-to-end iOS feature, or routing work across the installed iOS agents.
+description: Install and coordinate a documentation-first, project-scoped Codex workflow for native iOS product discovery, requirements, architecture, SwiftUI implementation, QA, privacy, App Store release, and growth marketing. Use when starting a new iOS product, planning a feature, setting up this kit, or routing work across the installed iOS agents.
 ---
 
 # iOS App Agent Workflow
@@ -18,6 +18,18 @@ Use this skill to install or operate the project-scoped iOS development team sup
 ## Coordinate feature work
 
 Read the installed `AGENTS.md` and `docs/AI_DRIVEN_DEVELOPMENT.md` completely before deciding whether to delegate. The main agent is the default executor.
+
+### Documentation-first gate
+
+Do not begin product implementation until the project has an explicit written basis for the work.
+
+- For a new product, create or complete the numbered documents in `docs/` in order, beginning with `00_INDEX.md` and `01_PRODUCT_CONCEPT.md`. Define the target user, problem, value, non-goals, differentiation, success signals, requirements, UX states, acceptance criteria, technical architecture, data model, roadmap, test/release approach, and open decisions before writing production code.
+- Treat concept approval as the first gate. Do not infer a product concept from an implementation request or start scaffolding while the target user, problem, and value remain undefined.
+- For a new feature or behavior change, update the existing authoritative requirements, UX, architecture/data, roadmap, test, and decision documents that are affected before implementation. Create a bounded execution plan when the installed rules require one.
+- Mark statements as decided, provisional, or open. An open decision that changes product behavior, data safety, architecture, monetization, privacy, or release scope blocks implementation unless the user explicitly accepts a provisional choice.
+- Write observable acceptance criteria and a validation plan before code changes. Documentation is not complete merely because files exist.
+- A narrow bug fix, test-only change, refactor with no behavior change, or mechanical maintenance task may reuse existing documentation. Confirm that no specification changes are needed and record any discovered mismatch before continuing.
+- Keep documents proportional to the product and reuse existing authoritative files instead of creating duplicates.
 
 - Keep 1–3 file changes, simple fixes, small UI changes, and short documentation updates in the main agent when it already has the needed context.
 - Delegate only when parallelism, context isolation, specialist review, or an independent high-risk QA pass clearly outweighs rereading and coordination costs.
