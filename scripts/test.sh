@@ -19,6 +19,11 @@ test -f "$test_root/project/docs/exec-plans/TEMPLATE.md"
 test "$(find "$test_root/project/.codex/agents" -name '*.toml' | wc -l | tr -d ' ')" = "9"
 grep -q 'ExampleApp' "$test_root/project/AGENTS.md"
 ! grep -R -q '{{APP_NAME}}' "$test_root/project"
+grep -q 'メインエージェントをデフォルトの実行主体' "$test_root/project/AGENTS.md"
+grep -q '同時subagent数は原則2〜3' "$test_root/project/AGENTS.md"
+grep -q '別worktreeや別ディレクトリを自動作成しません' "$test_root/project/AGENTS.md"
+grep -q 'Main Agent First' "$test_root/project/docs/AI_DRIVEN_DEVELOPMENT.md"
+cmp -s "$kit_root/skills/ios-app-agent-workflow/SKILL.md" "$test_root/project/.agents/skills/ios-app-agent-workflow/SKILL.md"
 
 if "$kit_root/scripts/install.sh" "$test_root/project" >/dev/null 2>&1; then
   printf '%s\n' 'Expected conflict detection to fail.' >&2
